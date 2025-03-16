@@ -1,0 +1,43 @@
+{
+  "name": "nextjs-liveblocks-base",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@liveblocks/client": "^2.2.20",
+    "@liveblocks/node": "^2.2.20",
+    "@liveblocks/react": "^2.2.20",
+    "@liveblocks/react-tiptap": "^2.2.20",
+    "@liveblocks/react-ui": "^2.2.20",
+    "@radix-ui/react-select": "^2.1.6",
+    "@radix-ui/react-slot": "^1.1.2",
+    "@tailwindcss/postcss": "^4.0.14",
+    "@types/node": "20.4.5",
+    "@types/react": "18.2.17",
+    "@types/react-dom": "18.2.7",
+    "class-variance-authority": "^0.7.1",
+    "classnames": "^2.5.1",
+    "clsx": "^2.1.1",
+    "eslint": "8.45.0",
+    "eslint-config-next": "13.4.12",
+    "lucide-react": "^0.482.0",
+    "nanoid": "5.0.8",
+    "next": "^15.2.2",
+    "postcss": "^8.5.3",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "tailwind-merge": "^3.0.2",
+    "tailwindcss": "^4.0.14",
+    "tailwindcss-animate": "^1.0.7",
+    "typescript": "5.1.6"
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^8.9.0",
+    "prettier": "^3.0.0"
+  }
+}
