@@ -3,13 +3,7 @@ import { ThreadData } from "@liveblocks/core";
 import { Comment, Thread } from "@liveblocks/react-ui";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
-export function CustomThread({
-  thread,
-  initialThread,
-}: {
-  thread: ThreadData;
-  initialThread: boolean;
-}) {
+export function CustomThread({ thread }: { thread: ThreadData }) {
   const [temporarilyOpen, setTemporarilyOpen] = useState(false);
   const showFullThread = !thread.resolved || temporarilyOpen;
 
@@ -49,7 +43,6 @@ export function CustomThread({
           <Thread
             thread={thread}
             indentCommentContent={false}
-            showResolveAction={!initialThread}
             showActions={true}
             showComposer={temporarilyOpen ? false : "collapsed"}
             onResolvedChange={() => setTemporarilyOpen(false)}

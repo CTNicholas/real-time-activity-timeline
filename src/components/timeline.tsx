@@ -31,11 +31,7 @@ function MainTimeline() {
 
           {items.map((item) =>
             item.type === "thread" ? (
-              <CustomThread
-                key={item.id}
-                thread={item}
-                initialThread={item.id === threads[0].id}
-              />
+              <CustomThread key={item.id} thread={item} />
             ) : (
               <ActionRow key={item.timestamp} action={item} />
             )
