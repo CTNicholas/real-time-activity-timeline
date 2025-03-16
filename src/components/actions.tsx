@@ -91,7 +91,7 @@ export function ActionUser({ user }: { user: Liveblocks["UserMeta"] | null }) {
   }
 
   return (
-    <div className="inline-flex items-center gap-[5px] pl-[3px] font-medium text-neutral-800">
+    <div className="inline-flex items-center gap-[5px] pl-[3px] font-medium text-neutral-800 whitespace-nowrap">
       <ActionAvatar src={user.info.avatar} />
       {user.info.name}
     </div>

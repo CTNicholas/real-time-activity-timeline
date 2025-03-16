@@ -9,7 +9,7 @@ export default function Page() {
   return (
     <Room>
       <main className="">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-5xl mx-auto pb-8">
           <div>
             <div className="pt-10 mb-2 mx-8 pb-6 flex flex-col gap-1">
               <div className="text-[34px] font-normal">Page title</div>
