@@ -24,11 +24,17 @@ export type ActionUnReview = BaseAction & {
   kind: "unreview";
 };
 
+export type ActionEditor = BaseAction & {
+  kind: "editor";
+  field: string;
+};
+
 export type Action =
   | ActionAssign
   | ActionUnAssign
   | ActionReview
-  | ActionUnReview;
+  | ActionUnReview
+  | ActionEditor;
 
 declare global {
   interface Liveblocks {

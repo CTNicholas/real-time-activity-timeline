@@ -2,11 +2,16 @@
 
 import { useStorage, useThreads } from "@liveblocks/react/suspense";
 import { Composer } from "@liveblocks/react-ui";
-import { ClientSideSuspense } from "@liveblocks/react";
+import { ClientSideSuspense, useMutation } from "@liveblocks/react";
 import { Action } from "@/liveblocks.config";
-import { ThreadData } from "@liveblocks/core";
+import { LiveObject, ThreadData } from "@liveblocks/core";
 import { ActionRow } from "@/components/actions";
 import { CustomThread } from "@/components/threads";
+import { nanoid } from "nanoid";
+import { useLiveblocksExtension } from "@liveblocks/react-tiptap";
+import { useEditor, EditorContent } from "@tiptap/react";
+import StarterKit from "@tiptap/starter-kit";
+import { AddEditor, CustomEditor } from "./editors";
 
 export function Timeline() {
   return (
@@ -32,6 +37,8 @@ function MainTimeline() {
           {items.map((item) =>
             item.type === "thread" ? (
               <CustomThread key={item.id} thread={item} />
+            ) : item.type === "action" && item.kind === "editor" ? (
+              <CustomEditor key={item.timestamp} field={item.field} />
             ) : (
               <ActionRow key={item.timestamp} action={item} />
             )
@@ -40,6 +47,7 @@ function MainTimeline() {
           <div className="w-full h-[3px] bg-neutral-200 mt-3" />
         </div>
       ) : null}
+      <AddEditor />
 
       <Composer className="border border-neutral-300 rounded-lg overflow-hidden text-sm" />
     </div>

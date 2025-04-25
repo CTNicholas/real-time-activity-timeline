@@ -23,6 +23,12 @@ body {
 /* https://liveblocks.io/docs/api-reference/liveblocks-react-ui#CSS-variables */
 .lb-root {
   --lb-spacing: 0.88em;
+  --lb-radius: 6px;
+}
+
+.lb-tooltip,
+.lb-portal {
+  z-index: 20;
 }
 
 :root {
@@ -139,4 +145,132 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.collaboration-cursor__caret {
+  border-radius: 3px;
+}
+
+.collaboration-cursor__label {
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 3px;
+}
+
+.tiptap p.is-editor-empty:first-child::before {
+  color: #a8b1bb;
+  content: attr(data-placeholder);
+  float: left;
+  height: 0;
+  pointer-events: none;
+}
+
+.tiptap hr {
+  margin: 14px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* Heading styles below */
+.tiptap h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 12px;
+  margin-bottom: 2px;
+}
+
+.tiptap h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 8px;
+  margin-bottom: 2px;
+}
+
+.tiptap h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 6px;
+  margin-bottom: 2px;
+}
+
+.tiptap h1:first-child,
+.tiptap h2:first-child,
+.tiptap h3:first-child {
+  margin-top: 0;
+}
+
+.tiptap h1 + h2,
+.tiptap h1 + h3,
+.tiptap h2 + h1,
+.tiptap h2 + h3,
+.tiptap h3 + h1,
+.tiptap h3 + h2 {
+  margin-top: 0;
+}
+
+.tiptap a {
+  color: var(--accent);
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.tiptap blockquote {
+  margin-left: 3px;
+  padding-left: 8px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  display: block;
+  border-left: 3px solid var(--border);
+}
+
+.tiptap ol,
+.tiptap ul {
+  margin-left: 6px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.tiptap li p {
+  margin: 2px 0;
+}
+
+.tiptap li {
+  margin-left: 12px;
+  padding-left: 2px;
+  list-style: disc;
+}
+
+.tiptap li li,
+.tiptap li li li li li {
+  margin-left: 8px;
+  list-style: circle;
+}
+
+.tiptap li li li,
+.tiptap li li li li li li {
+  list-style: square;
+}
+
+.tiptap li li li li,
+.tiptap li li li li li li li {
+  list-style: disc;
+}
+
+.tiptap ol li {
+  list-style: decimal;
+}
+
+.tiptap ol li li,
+.tiptap ol li li li li li {
+  list-style: lower-alpha;
+}
+
+.tiptap ol li li li,
+.tiptap ol li li li li li li {
+  list-style: lower-roman;
+}
+
+.tiptap ol li li li li,
+.tiptap ol li li li li li li li {
+  list-style: decimal;
 }
