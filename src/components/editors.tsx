@@ -69,5 +69,12 @@ export function AddEditor() {
     );
   }, []);
 
-  return <button onClick={addEditor}>Add editor</button>;
+  return (
+    <button
+      className="relative cursor-pointer bg-neutral-100 text-gray-500 hover:bg-white hover:text-gray-700 transition-colors border rounded-lg py-2 text-sm font-medium w-full mt-0"
+      onClick={addEditor}
+    >
+      Add editor
+    </button>
+  );
 }

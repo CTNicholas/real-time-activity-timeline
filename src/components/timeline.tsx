@@ -44,10 +44,10 @@ function MainTimeline() {
             )
           )}
 
+          <AddEditor />
           <div className="w-full h-[3px] bg-neutral-200 mt-3" />
         </div>
       ) : null}
-      <AddEditor />
 
       <Composer className="border border-neutral-300 rounded-lg overflow-hidden text-sm" />
     </div>
